@@ -109,8 +109,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\AEP pic2.png" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
+    <Content Include="Views\Improvements.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

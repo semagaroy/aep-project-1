@@ -15,25 +15,47 @@
         @* END Search *@
         @* BEGIN Menu *@
         <ul class="sidebar-menu">
-            <li class="header">HEADER</li>
+            <li class="header"></li>
+
             <li class="@Url.IsLinkActive("Index", "Home")">
-                <a href="@Url.Action("Index", "Home")"><i class="fa fa-link"></i> <span>Home</span></a>
-            </li>
+                <a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i> <span>Home</span></a>
+
             <li class="@Url.IsLinkActive("AnotherLink", "Home")">
-                <a href="@Url.Action("AnotherLink", "Home")"><i class="fa fa-link"></i> <span>Another Link</span></a>
-            </li>
+                <a href="@Url.Action("AnotherLink", "Home")"><i class="fa fa-arrow-up"></i> <span>Improvements</span></a>
+
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-link"></i> <span>Multilevel</span>
+                    <i class="fa fa-plus-square"></i> <span>Safety</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
+                    <li><a href="#">Metrics</a></li>
+                    <li><a href="#">Incidents</a></li>
+
                 </ul>
             </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-bar-chart"></i> <span>Operations</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#">Metrics</a></li>
+                    <li><a href="#">Projects</a></li>
+
+                </ul>
+            </li>
+
+            <li class="@Url.IsLinkActive("AnotherLink", "Home")">
+                <a href="@Url.Action("AnotherLink", "Home")"><i class="fa fa-link"></i> <span>Culture</span></a>
+
+                   
+           
         </ul>
         @* END Menu *@
     </section>
