@@ -8,10 +8,31 @@ namespace aep_project_1.Controllers
         {
             return View();
         }
-
-        public ActionResult AnotherLink()
+        public ActionResult Improvements()
         {
-            return View("Index");
+            return View();
         }
+        public ActionResult SMetrics()
+        {
+            return View();
+        }
+        public ActionResult Incidents()
+        {
+            return View();
+        }
+        public ActionResult OMetrics()
+        {
+            return View();
+        }
+        public ActionResult Projects()
+        {
+            return View();
+        }
+        public ActionResult Culture()
+        {
+            return View();
+        }
+
+
     }
 }

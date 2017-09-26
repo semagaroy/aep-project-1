@@ -20,8 +20,8 @@
             <li class="@Url.IsLinkActive("Index", "Home")">
                 <a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i> <span>Home</span></a>
 
-            <li class="@Url.IsLinkActive("AnotherLink", "Home")">
-                <a href="@Url.Action("AnotherLink", "Home")"><i class="fa fa-arrow-up"></i> <span>Improvements</span></a>
+            <li class="@Url.IsLinkActive("Improvements", "Home")">
+                <a href="@Url.Action("Improvements", "Home")"><i class="fa fa-arrow-up"></i> <span>Improvements</span></a>
 
             <li class="treeview">
                 <a href="#">
@@ -31,8 +31,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Metrics</a></li>
-                    <li><a href="#">Incidents</a></li>
+                    <li><a href="@Url.Action("SMetrics", "Home")">Metrics</a></li>
+                    <li><a href="@Url.Action("Incidents", "Home")">Incidents</a></li>
 
                 </ul>
             </li>
@@ -45,14 +45,14 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Metrics</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="@Url.Action("OMetrics", "Home")">Metrics</a></li>
+                    <li><a href="@Url.Action("Projects", "Home")">Projects</a></li>
 
                 </ul>
             </li>
 
             <li class="@Url.IsLinkActive("AnotherLink", "Home")">
-                <a href="@Url.Action("AnotherLink", "Home")"><i class="fa fa-link"></i> <span>Culture</span></a>
+                <a href="@Url.Action("Culture", "Home")"><i class="fa fa-link"></i> <span>Culture</span></a>
 
                    
            

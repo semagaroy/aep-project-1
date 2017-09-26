@@ -113,6 +113,12 @@
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Views\Improvements.cshtml" />
+    <Content Include="Views\Home\Improvements.cshtml" />
+    <Content Include="Views\Home\Incidents.cshtml" />
+    <Content Include="Views\Home\SMetrics.cshtml" />
+    <Content Include="Views\Home\OMetrics.cshtml" />
+    <Content Include="Views\Home\Projects.cshtml" />
+    <Content Include="Views\Home\Culture.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
