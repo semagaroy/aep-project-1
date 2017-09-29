@@ -8,6 +8,7 @@ namespace aep_project_1.App_Start
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new StyleBundle("~/Bundles/css")
+                .Include("~/Content/css/imgSize.css")
                 .Include("~/Content/css/bootstrap.min.css", new CssRewriteUrlTransformAbsolute())
                 .Include("~/Content/css/select2.min.css")
                 .Include("~/Content/css/bootstrap-datepicker3.min.css")
