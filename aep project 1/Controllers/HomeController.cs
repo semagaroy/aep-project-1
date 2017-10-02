@@ -32,6 +32,14 @@ namespace aep_project_1.Controllers
         {
             return View();
         }
+        public ActionResult Other()
+        {
+            return View();
+        }
+        public PartialViewResult IframeAction()
+        {
+            return PartialView();
+        }
 
 
     }
