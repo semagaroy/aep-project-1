@@ -1,9 +1,9 @@
-﻿
+﻿@model List<aep_project_1.Models.SCORECARD_FACT>
 @{
-    ViewBag.Title = "Improvements";
+    ViewBag.Title = "CONTINUOUS IMPROVEMENTS";
 }
 
-<h2>Improvements</h2>
+@*<h2>CONTINUOUS IMPROVEMENTS</h2>*@
 
 <center>
     <div class="row">
@@ -12,8 +12,15 @@
                 <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">Continuous Improvement Ideas Open</span>
-                    <span class="info-box-number">34</span>
+                    <span class="info-box-text">class 2 estimate tolerance adherance <BR>(+20/-15) for all apps</span>
+                    <span class="info-box-number">
+                        @{
+
+                        var CIe = Model.Find(x => x.MEASURE_ID == 14);
+                        <b>@CIe.MEASURE_VALUE%</b>
+                    }
+                </span>
+                
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -23,9 +30,63 @@
                 <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">Continuous Improvement Ideas Implemented (%)</span>
-                    <span class="info-box-number">67%</span>
+                    <span class="info-box-text">% Ideas Implemented</span>
+                    <span class="info-box-number">
+                        @{
+
+                            var CIb = Model.Find(x => x.MEASURE_ID == 9);
+                            <b>@CIb.MEASURE_VALUE%</b>
+                        }
+                    
+                    </span>
                 </div>
+                <!-- /.info-box-content -->
+            </div>
+        </div>
+    </div>
+</center>
+
+<center>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="info-box">
+
+                <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">class 4 estimate tolerance adherance <BR>(+50/-30) for all apps</span>
+                    <span class="info-box-number">
+                        @{
+
+                            var CId = Model.Find(x => x.MEASURE_ID == 13);
+                            <b>@CId.MEASURE_VALUE%</b>
+                        }
+                    </span>
+                   
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="info-box">
+                <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Ideas Open</span>
+                    <span class="info-box-number">
+                        @{
+
+                            var CIa = Model.Find(x => x.MEASURE_ID == 8);
+                            <b>@CIa.MEASURE_VALUE</b>
+                        }
+
+
+                    </span>
+
+                </div>
+
+
+
                 <!-- /.info-box-content -->
             </div>
         </div>
@@ -39,38 +100,18 @@
                 <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">Continuous Improvement Ideas Over Budget</span>
-                    <span class="info-box-number">2</span>
-                </div>
-                <!-- /.info-box-content -->
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="info-box">
-                <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
+                    <span class="info-box-text">class 5 estimate tolerance adherance <BR>(+100/-50) for all apps</span>
+                    <span class="info-box-number">
+                        @{
 
-                <div class="info-box-content">
-                    <span class="info-box-text">Continuous Improvement Ideas Under Budget</span>
-                    <span class="info-box-number">6</span>
+                            var CIc = Model.Find(x => x.MEASURE_ID == 12);
+                            <b>@CIc.MEASURE_VALUE%</b>
+                        }
+                    </span>
+                    
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <!-- /.info-box-content -->
-            </div>
-        </div>
-    </div>
-</center>
-
-<center>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="info-box">
-                <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
-
-                <div class="info-box-content">
-                    <span class="info-box-text">Continuous Improvement Ideas On Budget</span>
-                    <span class="info-box-number">26</span>
-                </div>
-                <!-- /.info-box-content -->
-            </div>
         </div>
 
     </div>
