@@ -1,4 +1,4 @@
-﻿
+﻿@model List<aep_project_1.Models.SCORECARD_FACT>
 @{
     ViewBag.Title = "SMetrics";
 }
@@ -13,7 +13,14 @@
 
                 <div class="info-box-content">
                     <span class="info-box-text">Injuries & Illnesses </span>
-                    <span class="info-box-number">5</span>
+                    <span class="info-box-number">5
+                    @{
+
+                        var SMa = Model.Find(x => x.MEASURE_ID == 8);
+                        <b>@SMa.MEASURE_VALUE</b>
+                    }
+                    
+                    </span>
                 </div>
                 <!-- /.info-box-content -->
             </div>

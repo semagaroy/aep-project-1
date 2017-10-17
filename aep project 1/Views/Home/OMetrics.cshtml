@@ -1,9 +1,9 @@
-﻿
+﻿@model List<aep_project_1.Models.SCORECARD_FACT>
 @{
-    ViewBag.Title = "OMetrics";
+    ViewBag.Title = " ";
 }
 
-<h2>Operation Metrics</h2>
+<h2>OPERATIONS</h2>
 
 <center>
 <div class="row">
@@ -12,7 +12,14 @@
 
     <div class="info-box-content">
         <span class="info-box-text">Cisco EOL % Complete</span>
-        <span class="info-box-number">80%</span>
+        <span class="info-box-number">
+            @{
+
+                var OMa = Model.Find(x => x.MEASURE_ID == 23);
+                <b>@OMa.MEASURE_VALUE%</b>
+            }
+        </span>
+        
     </div>
     <!-- /.info-box-content -->
 </div></div>
@@ -21,7 +28,15 @@
 
     <div class="info-box-content">
         <span class="info-box-text">SCADA Transport Upgrade % Complete</span>
-        <span class="info-box-number">76%</span>
+        <span class="info-box-number">
+            
+            @{
+
+                var OMb = Model.Find(x => x.MEASURE_ID == 24);
+                <b>@OMb.MEASURE_VALUE%</b>
+            }
+        </span>
+        
     </div>
     <!-- /.info-box-content -->
 </div></div>
@@ -34,7 +49,13 @@
 
     <div class="info-box-content">
         <span class="info-box-text">Service Desk Average Speed Of Answer</span>
-        <span class="info-box-number">1:12</span>
+        <span class="info-box-number">
+            @{
+
+            var OMc = Model.Find(x => x.MEASURE_ID == 29);
+            <b>@OMc.MEASURE_VALUE</b>
+        }
+    </span>
     </div>
     <!-- /.info-box-content -->
 </div></div>
@@ -43,7 +64,11 @@
 
     <div class="info-box-content">
         <span class="info-box-text">% Change In Ticket Backlog</span>
-        <span class="info-box-number">12%</span>
+        <span class="info-box-number">@{
+
+            var OMd = Model.Find(x => x.MEASURE_ID == 32);
+            <b>@OMd.MEASURE_VALUE%</b>
+        }</span>
     </div>
     <!-- /.info-box-content -->
 </div></div>
@@ -54,8 +79,13 @@
     <span class="info-box-icon bg-red"><i class="fa  fa-exchange"></i></span>
 
     <div class="info-box-content">
-        <span class="info-box-text">Cross Training %</span>
-        <span class="info-box-number">57%</span>
+        <span class="info-box-text">Cross Training Improvement</span>
+        <span class="info-box-number">
+        @{
+
+            var OMe = Model.Find(x => x.MEASURE_ID == 10);
+            <b>@OMe.MEASURE_VALUE%</b>
+        }</span>
     </div>
     <!-- /.info-box-content -->
 </div></div>
@@ -64,10 +94,49 @@
 
     <div class="info-box-content">
         <span class="info-box-text">Reported Training Hours</span>
-        <span class="info-box-number">1,410</span>
+        <span class="info-box-number">@{
+
+            var OMf = Model.Find(x => x.MEASURE_ID == 10);
+            <b>@OMf.MEASURE_VALUE</b>
+        }</span>
     </div>
     <!-- /.info-box-content -->
 </div></div>
     </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="info-box">
+                <span class="info-box-icon bg-red"><i class="fa  fa-clock-o"></i></span>
 
+                <div class="info-box-content">
+                    <span class="info-box-text">network reliability<br>reachability</span>
+                    <span class="info-box-number">
+                        @{
+
+                            var OMg = Model.Find(x => x.MEASURE_ID == 29);
+                            <b>@OMg.MEASURE_VALUE</b>
+                        }
+                    </span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="info-box">
+                <span class="info-box-icon bg-red"><i class="fa  fa-clock-o"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">network reliability<br>latency</span>
+                    <span class="info-box-number">
+                        @{
+
+                        var OMh = Model.Find(x => x.MEASURE_ID == 32);
+                        <b>@OMh.MEASURE_VALUE%</b>
+                    }
+                </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+    </div>
+</div>
 </center>

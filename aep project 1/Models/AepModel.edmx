@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ITSCADM.SCORECARD_FACT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SCORECARD_FACT">
+          <Key>
+            <PropertyRef Name="CATEGORY_ID" />
+            <PropertyRef Name="DATE_ID" />
+            <PropertyRef Name="MEASURE_ID" />
+          </Key>
+          <Property Name="CATEGORY_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DATE_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="MEASURE_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="MEASURE_ENTITY_1" Type="char" MaxLength="10" />
+          <Property Name="MEASURE_ENTITY_TYPE_1" Type="char" MaxLength="10" />
+          <Property Name="MEASURE_ENTITY_2" Type="char" MaxLength="10" />
+          <Property Name="MEASURE_ENTITY_TYPE_2" Type="char" MaxLength="10" />
+          <Property Name="MEASURE_VALUE" Type="varchar2" MaxLength="4000" />
+          <Property Name="LAST_UPDT_DTTM" Type="timestamp" Precision="6" />
+          <Property Name="LAST_UPDT_ID" Type="char" MaxLength="8" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ITSCADM.SCORECARD_PHOTO_FACT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SCORECARD_PHOTO_FACT">
+          <Key>
+            <PropertyRef Name="CATEGORY_ID" />
+            <PropertyRef Name="DATE_ID" />
+            <PropertyRef Name="MEASURE_ID" />
+          </Key>
+          <Property Name="CATEGORY_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DATE_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="MEASURE_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="EMPLOYEE_PHOTO" Type="blob" />
+          <Property Name="LAST_UPDT_DTTM" Type="timestamp" Precision="6" />
+          <Property Name="LAST_UPDT_ID" Type="varchar2" MaxLength="8" />
+          <Property Name="PHOTO_INSRT_DTTM" Type="timestamp" Precision="6" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="SCORECARD_FACT" EntityType="Self.SCORECARD_FACT" store:Type="Tables" store:Schema="ITSCADM">
+            <DefiningQuery>SELECT 
+"SCORECARD_FACT"."CATEGORY_ID" AS "CATEGORY_ID", 
+"SCORECARD_FACT"."DATE_ID" AS "DATE_ID", 
+"SCORECARD_FACT"."MEASURE_ID" AS "MEASURE_ID", 
+"SCORECARD_FACT"."MEASURE_ENTITY_1" AS "MEASURE_ENTITY_1", 
+"SCORECARD_FACT"."MEASURE_ENTITY_TYPE_1" AS "MEASURE_ENTITY_TYPE_1", 
+"SCORECARD_FACT"."MEASURE_ENTITY_2" AS "MEASURE_ENTITY_2", 
+"SCORECARD_FACT"."MEASURE_ENTITY_TYPE_2" AS "MEASURE_ENTITY_TYPE_2", 
+"SCORECARD_FACT"."MEASURE_VALUE" AS "MEASURE_VALUE", 
+"SCORECARD_FACT"."LAST_UPDT_DTTM" AS "LAST_UPDT_DTTM", 
+"SCORECARD_FACT"."LAST_UPDT_ID" AS "LAST_UPDT_ID"
+FROM "ITSCADM"."SCORECARD_FACT" "SCORECARD_FACT"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SCORECARD_PHOTO_FACT" EntityType="Self.SCORECARD_PHOTO_FACT" store:Type="Tables" store:Schema="ITSCADM">
+            <DefiningQuery>SELECT 
+"SCORECARD_PHOTO_FACT"."CATEGORY_ID" AS "CATEGORY_ID", 
+"SCORECARD_PHOTO_FACT"."DATE_ID" AS "DATE_ID", 
+"SCORECARD_PHOTO_FACT"."MEASURE_ID" AS "MEASURE_ID", 
+"SCORECARD_PHOTO_FACT"."EMPLOYEE_PHOTO" AS "EMPLOYEE_PHOTO", 
+"SCORECARD_PHOTO_FACT"."LAST_UPDT_DTTM" AS "LAST_UPDT_DTTM", 
+"SCORECARD_PHOTO_FACT"."LAST_UPDT_ID" AS "LAST_UPDT_ID", 
+"SCORECARD_PHOTO_FACT"."PHOTO_INSRT_DTTM" AS "PHOTO_INSRT_DTTM"
+FROM "ITSCADM"."SCORECARD_PHOTO_FACT" "SCORECARD_PHOTO_FACT"</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SCORECARD_FACT">
+          <Key>
+            <PropertyRef Name="CATEGORY_ID" />
+            <PropertyRef Name="DATE_ID" />
+            <PropertyRef Name="MEASURE_ID" />
+          </Key>
+          <Property Name="CATEGORY_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DATE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="MEASURE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="MEASURE_ENTITY_1" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MEASURE_ENTITY_TYPE_1" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MEASURE_ENTITY_2" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MEASURE_ENTITY_TYPE_2" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MEASURE_VALUE" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="LAST_UPDT_DTTM" Type="DateTime" Precision="6" />
+          <Property Name="LAST_UPDT_ID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SCORECARD_PHOTO_FACT">
+          <Key>
+            <PropertyRef Name="CATEGORY_ID" />
+            <PropertyRef Name="DATE_ID" />
+            <PropertyRef Name="MEASURE_ID" />
+          </Key>
+          <Property Name="CATEGORY_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DATE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="MEASURE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="EMPLOYEE_PHOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="LAST_UPDT_DTTM" Type="DateTime" Precision="6" />
+          <Property Name="LAST_UPDT_ID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="PHOTO_INSRT_DTTM" Type="DateTime" Precision="6" />
+        </EntityType>
+        <EntityContainer Name="AepEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SCORECARD_FACT" EntityType="Self.SCORECARD_FACT" />
+          <EntitySet Name="SCORECARD_PHOTO_FACT" EntityType="Self.SCORECARD_PHOTO_FACT" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="AepEntities">
+          <EntitySetMapping Name="SCORECARD_FACT">
+            <EntityTypeMapping TypeName="Model.SCORECARD_FACT">
+              <MappingFragment StoreEntitySet="SCORECARD_FACT">
+                <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+                <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+                <ScalarProperty Name="MEASURE_ID" ColumnName="MEASURE_ID" />
+                <ScalarProperty Name="MEASURE_ENTITY_1" ColumnName="MEASURE_ENTITY_1" />
+                <ScalarProperty Name="MEASURE_ENTITY_TYPE_1" ColumnName="MEASURE_ENTITY_TYPE_1" />
+                <ScalarProperty Name="MEASURE_ENTITY_2" ColumnName="MEASURE_ENTITY_2" />
+                <ScalarProperty Name="MEASURE_ENTITY_TYPE_2" ColumnName="MEASURE_ENTITY_TYPE_2" />
+                <ScalarProperty Name="MEASURE_VALUE" ColumnName="MEASURE_VALUE" />
+                <ScalarProperty Name="LAST_UPDT_DTTM" ColumnName="LAST_UPDT_DTTM" />
+                <ScalarProperty Name="LAST_UPDT_ID" ColumnName="LAST_UPDT_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCORECARD_PHOTO_FACT">
+            <EntityTypeMapping TypeName="Model.SCORECARD_PHOTO_FACT">
+              <MappingFragment StoreEntitySet="SCORECARD_PHOTO_FACT">
+                <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+                <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+                <ScalarProperty Name="MEASURE_ID" ColumnName="MEASURE_ID" />
+                <ScalarProperty Name="EMPLOYEE_PHOTO" ColumnName="EMPLOYEE_PHOTO" />
+                <ScalarProperty Name="LAST_UPDT_DTTM" ColumnName="LAST_UPDT_DTTM" />
+                <ScalarProperty Name="LAST_UPDT_ID" ColumnName="LAST_UPDT_ID" />
+                <ScalarProperty Name="PHOTO_INSRT_DTTM" ColumnName="PHOTO_INSRT_DTTM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
