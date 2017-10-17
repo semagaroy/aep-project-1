@@ -2,27 +2,25 @@
 <aside class="main-sidebar">
     <section class="sidebar">
         @* BEGIN Search *@
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search...">
-                <span class="input-group-btn">
-                    <button type="submit" name="search" id="search-btn" class="btn btn-primary">
-                        <i class="fa fa-search"></i>
-
-                    </button>
-                </span>
-            </div>
-        </form>
+     
+  
 
         @* END Search *@
         @* BEGIN Menu *@
         <ul class="sidebar-menu">
             <li class="header"></li>
             <!-------Do not change below this line------->
-            <div align="center"><iframe align="center" src="http://widget.calendarlabs.com/v1/quot.php?cid=101&uid=488981776&c=inspirational&l=en&cbg=FFFFFF&cb=1&cbc=000000&cf=calibri&cfg=000000&qfs=bi&qta=center&tfg=000000&tfs=bi&afc=000000&afs=i" width="188" height="210" marginwidth=0 marginheight=0 frameborder=no scrolling=no allowtransparency='true'>Loading...</iframe><div align="center" style="width:140px;font-size:10px;color:#333;">Daily Quotes by <a href="https://www.calendarlabs.com/" target="_blank" rel="nofollow" style="font-size:10px;text-decoration:none;color:#333;">CalendarLabs</a></div></div>
+            <li>
+                <div align="center">
+                    <iframe align="center" src="http://widget.calendarlabs.com/v1/quot.php?cid=101&uid=488981776&c=inspirational&l=en&cbg=FFFFFF&cb=1&cbc=000000&cf=calibri&cfg=000000&qfs=bi&qta=center&tfg=000000&tfs=bi&afc=000000&afs=i" width="188" height="210" marginwidth=0 marginheight=0 frameborder=no scrolling=no allowtransparency='true'>Loading...</iframe>
+                    <div align="center" style="width:140px;font-size:10px;color:#333;">
+                        Daily Quotes by <a href="https://www.calendarlabs.com/" target="_blank" rel="nofollow" style="font-size:10px;text-decoration:none;color:#333;">CalendarLabs</a>
+                    </div>
+                </div>
+            </li>
             <!-------Do not change above this line------->
 
-            <li class="@Url.IsLinkActive("Index", "Home") btn btn-block btn-primary btn-lg" >
+            <li class="@Url.IsLinkActive("Index", "Home") btn btn-block btn-primary btn-lg">
                 <a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i> <span>Home</span></a>
 
             <li class="@Url.IsLinkActive("Improvements", "Home") btn btn-block btn-primary btn-lg">
@@ -62,12 +60,12 @@
             <li class="@Url.IsLinkActive("Other", "Home") btn btn-block btn-primary btn-lg">
                 <a href="@Url.Action("Other", "Home")"><i class="fa fa-asterisk"></i> <span>Other</span></a>
 
-</ul>
+        </ul>
         <br />
-               
 
-                   
-           
+
+
+
         </ul>
         @* END Menu *@
     </section>

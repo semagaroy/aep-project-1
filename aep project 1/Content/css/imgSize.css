@@ -6,8 +6,15 @@
 }
 .aepRed {
     background-color: #da291c !important;
+    }
+.aepGrey{
+    background-color: #707372 !important;
 }
 
 .fontSize  {
     font-size: 250%;
+}
+
+a {
+    background-color: #707372 !important;
 }
