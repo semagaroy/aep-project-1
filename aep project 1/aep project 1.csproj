@@ -161,6 +161,7 @@
     </Content>
     <Content Include="Views\Home\EMPLOYEE_PROFILE.cshtml" />
     <Content Include="Views\Home\Safety.cshtml" />
+    <None Include="Properties\PublishProfiles\aepproject120171018032853 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
