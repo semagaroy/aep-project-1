@@ -7,26 +7,39 @@
 <div class="row">
     
     <!-- ./col -->
+    
     <div class="col-lg-6 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-red">
             <div class="inner">
-                <h3>40<sup style="font-size: 20px"></sup></h3>
+                <h3>
+                    @{
 
-                <p>POWER UP &amp; LEAD COMPLETION</p>
-            </div>
-            <div class="icon">
-                <i class="fa fa-handshake-o fa-6"></i>
-            </div>
-           
+                    var CUa = Model.Find(x => x.MEASURE_ID == 4);
+                    <b>@CUa.MEASURE_VALUE</b>
+                }
+                <sup style="font-size: 20px"></sup>
+            </h3>
+
+            <p>POWER UP &amp; LEAD COMPLETION</p>
         </div>
+        <div class="icon">
+            <i class="fa fa-handshake-o fa-6"></i>
+        </div>
+
     </div>
+</div>
     <!-- ./col -->
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-red">
             <div class="inner">
-                <h3>35</h3>
+                <h3>@{
+
+                    var CUb= Model.Find(x => x.MEASURE_ID == 6);
+                    <b>@CUb.MEASURE_VALUE</b>
+                }
+                </h3>
 
                 <p>CULTURE CHAMPIONS</p>
             </div>
@@ -41,7 +54,12 @@
         <!-- small box -->
         <div class="small-box bg-red">
             <div class="inner">
-                <h3>65</h3>
+                <h3>@{
+
+                    var CUc = Model.Find(x => x.MEASURE_ID == 7);
+                    <b>@CUc.MEASURE_VALUE</b>
+                }
+                </h3>
 
                 <p>ERG PARTICIPANTS</p>
             </div>
@@ -61,65 +79,119 @@
         <div class="box box-widget widget-user">
           <div class="col-md-6">
               <div class="widget-user-header bg-red">
-                  <h5 class="widget-user-desc">Recognizee</h5>
-                  <h3 class="widget-user-username">Boby A.</h3>
-                  <h5 class="widget-user-desc">BUSINESS ANALYST</h5>
+                  <h5 class="widget-user-desc">Recognizee:</h5>
+                  <h3 class="widget-user-username">
+                      @{
+
+                          var CUd = Model.Find(x => x.MEASURE_ID == 5);
+                          @CUd.MEASURE_ENTITY_1
+                      }
+                  </h3>
+                  
               </div>
             </div>
             <div class="col-md-6">
                 <div class="widget-user-header bg-red">
-                    <h5 class="widget-user-desc">Recognizer</h5>
-                    <h3 class="widget-user-username">Jimmy D.</h3>
-                    <h5 class="widget-user-desc">BUSINESS ANALYST</h5>
+                    <h5 class="widget-user-desc">Recognizer:</h5>
+                    <h3 class="widget-user-username">@{
+
+                        var CUe = Model.Find(x => x.MEASURE_ID == 5);
+                        @CUe.MEASURE_ENTITY_2
+                    }
+                    </h3>
+                    
                 </div>
             </div>
 
             <div class="box-footer">
-                <div class="row">
-                    <div class="col-sm-12 border-right">
-                        <div class="description-block">
+                @*<div class="row">*@
+                <div class="col-lg-12 col-xs-12
+                    border-right">
+                    <div class="description-block">
 
-                            <span class="description-text">ack of the net to be inspired is to become creative, innovative and energized we want this philosophy to trickle down to all our stakeholders for if you want to motivate these clowns, try less carrot </span>
-                        </div>
-                        <!-- /.description-block -->
-                    </div>
+                        "<span class="description-text">
+                            @{
+
+                            var CUf = Model.Find(x => x.MEASURE_ID == 5);
+                            @CUf.MEASURE_VALUE
+                        }
+                    </span>"
+                </div>
+                <!-- /.description-block -->
+            </div>
+
+
 
                     <!-- /.col -->
                 </div>
                 <!-- /.row -->
             </div>
         </div>
+    <div class="col-md-6">
+        <h1 class="page-header"> GOOD CATCH</h1>
+        @*<div class="col-lg-6 col-xs-6">*@
+        <!-- small box -->
+        <div class="small-box bg-red">
+            <div class="inner">
+                <h3># 
+                    @{
+
+                        var CUh = Model.Find(x => x.MEASURE_ID == 2);
+                        <b>@CUh.MEASURE_VALUE</b>
+                    }
+                    <sup style="font-size: 20px"></sup>
+                </h3>
+                <h5 class="widget-user-desc">Narrative:</h5>
+                <span class="description-text">
+                    @{
+
+                        var CUg = Model.Find(x => x.MEASURE_ID == 3);
+                        @CUg.MEASURE_VALUE
+                    }
+                </span>
+            </div>
+            <div class="icon">
+                <i class="fa fa-handshake-o fa-6"></i>
+            </div>
+
+        </div>
+    </div>
+
     </div>
    
 
 
 
 <div class="row">
-    <div class="col-md-6">
-        <h1 class="page-header"> GOOD CATCH</h1>
-        <div class="box box-widget widget-user">
-            <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="col-md-6">
+    
+        
+        
+        <!-- <div class="box box-widget widget-user">
+             Add the bg color to the header using any of the bg-* classes 
+            @*<div class="col-md-6">*@
                 <div class="widget-user-header bg-red">
-                    <h5 class="widget-user-desc">Recognizee</h5>
-                    <h3 class="widget-user-username">Boby A.</h3>
-                    <h5 class="widget-user-desc">BUSINESS ANALYST</h5>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="widget-user-header bg-red">
-                    <h5 class="widget-user-desc"> </h5>
-                    <h3 class="widget-user-username">Good Catch #</h3>
-                    <h5 class="widget-user-desc">152</h5>
-                </div>
-            </div>
+                    <h5 class="widget-user-desc">Number:</h5>
+                    <h3 class="widget-user-username">@{
 
-            <div class="box-footer">
+//var CUg = Model.Find(x => x.MEASURE_ID == 2);
+//CUg.MEASURE_VALUE
+                    }</h3>
+                    
+                </div>
+            </div>-->
+            @*<div class="col-md-6">
+                <div class="widget-user-header bg-red">
+                    <h5 class="widget-user-desc">Narrative:</h5>
+                    <h3 class="widget-user-username"></h3>
+                </div>
+            </div>*@
+
+            @*<div class="box-footer">
                 <div class="row">
                     <div class="col-sm-12 border-right">
                         <div class="description-block">
 
-                            <span class="description-text">ack of the net to be inspired is to become creative, innovative and energized we want this philosophy to trickle down to all our stakeholders for if you want to motivate these clowns, try less carrot </span>
+                            <span class="description-text"></span>
                         </div>
                         <!-- /.description-block -->
                     </div>
@@ -127,8 +199,7 @@
                     <!-- /.col -->
                 </div>
                 <!-- /.row -->
-            </div>
+            </div>*@
         </div>
-    </div>
-    </div>
+ 
   

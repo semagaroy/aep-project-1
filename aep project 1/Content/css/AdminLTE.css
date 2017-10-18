@@ -1153,7 +1153,7 @@ a:focus {
   clear: both;
 }
 .navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-default {
-  color: #666666;
+  color: #707372;
 }
 @media (max-width: 991px) {
   .navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-default:hover {

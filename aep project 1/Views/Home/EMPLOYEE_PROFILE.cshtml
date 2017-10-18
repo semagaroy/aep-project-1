@@ -1,0 +1,31 @@
+﻿@model List<aep_project_1.Models.SCORECARD_FACT>
+@{
+    ViewBag.Title = "EMPLOYEE_PROFILE";
+    
+}
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="col-md-12">
+
+            @foreach (var data in Model.Where(x => x.MEASURE_ID == 36))
+            {
+                <!-- Widget: user widget style 1 -->
+                <div class="box box-widget widget-user-2">
+                    <!-- Add the bg color to the header using any of the bg-* classes -->
+                    <div class="widget-user-header bg-red">
+
+                        <!-- /.widget-user-image -->
+                        <h5 class="widget-user-desc">Employee | About</h5>  
+                        <p class="widget-user-username"><b>@data.MEASURE_ENTITY_1</b> | @data.MEASURE_VALUE</p>                        
+                    </div>
+
+                </div>
+            <!-- /.widget-user -->
+            }
+
+        </div>
+    </div>
+</div>

@@ -130,6 +130,7 @@
     <Content Include="Content\css\imgSize.css" />
     <Content Include="Content\img\1200px-AEP_logo.svg.png" />
     <Content Include="Content\img\AEP pic2.png" />
+    <Content Include="Content\img\AEPReverse_Logo_1x.png" />
     <Content Include="Content\img\BD1.PNG" />
     <Content Include="Content\img\BD2.PNG" />
     <Content Include="Content\img\HA1.PNG" />
@@ -148,12 +149,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Home\Improvements.cshtml" />
-    <Content Include="Views\Home\Incidents.cshtml" />
-    <Content Include="Views\Home\SMetrics.cshtml" />
     <Content Include="Views\Home\OMetrics.cshtml" />
     <Content Include="Views\Home\Projects.cshtml" />
     <Content Include="Views\Home\Culture.cshtml" />
-    <Content Include="Views\Home\Other.cshtml" />
     <EntityDeploy Include="Models\AepModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AepModel.Designer.cs</LastGenOutput>
@@ -161,6 +159,8 @@
     <Content Include="Models\AepModel.edmx.diagram">
       <DependentUpon>AepModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Views\Home\EMPLOYEE_PROFILE.cshtml" />
+    <Content Include="Views\Home\Safety.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

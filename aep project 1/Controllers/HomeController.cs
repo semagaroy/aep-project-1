@@ -9,17 +9,13 @@ namespace aep_project_1.Controllers
         AepEntities db = new AepEntities();
         public ActionResult Index()
         {
-            return View(db.SCORECARD_FACT.ToList());
+            return View();
         }
         public ActionResult Improvements()
         {
             return View(db.SCORECARD_FACT.ToList());
         }
-        public ActionResult SMetrics()
-        {
-            return View(db.SCORECARD_FACT.ToList());
-        }
-        public ActionResult Incidents()
+        public ActionResult Safety()
         {
             return View(db.SCORECARD_FACT.ToList());
         }
@@ -35,7 +31,7 @@ namespace aep_project_1.Controllers
         {
             return View(db.SCORECARD_FACT.ToList());
         }
-        public ActionResult Other()
+        public ActionResult Employee_Profile()
         {
             return View(db.SCORECARD_FACT.ToList());
         }
