@@ -131,9 +131,11 @@
     <Content Include="Content\img\1200px-AEP_logo.svg.png" />
     <Content Include="Content\img\AEP pic2.png" />
     <Content Include="Content\img\AEPReverse_Logo_1x.png" />
+    <Content Include="Content\img\AEP_logo_white.png" />
     <Content Include="Content\img\BD1.PNG" />
     <Content Include="Content\img\BD2.PNG" />
     <Content Include="Content\img\HA1.PNG" />
+    <Content Include="Content\img\logomain.png" />
     <Content Include="Global.asax" />
     <Content Include="Models\AepModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
